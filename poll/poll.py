@@ -118,9 +118,9 @@ class Polls(commands.Cog):
             await ctx.message.delete()
         except:
             pass
-        await ctx.channel.send("<@&660677269769027584>")
-        await ctx.message.delete(1).then()
         question = questions_and_choices[0]
+         await ctx.channel.send("<@&660677269769027584>")
+        await ctx.message.delete()
         
         if len(questions_and_choices) == 1:
             embed = discord.Embed(color=self.bot.main_color, description=f"**{question}**")
