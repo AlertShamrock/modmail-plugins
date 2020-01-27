@@ -74,7 +74,7 @@ class Polls(commands.Cog):
             await ctx.channel.delete_messages(messages)
         except:
             pass  # oh well
-        await ctx.channel.send("<@&660677269769027584>")
+        await ctx.channel.send("<@&660677269769027584>");
         answer = "\n".join(f"{keycap}: {content}" for keycap, content in answers)
         embed = discord.Embed(color=self.bot.main_color, timestamp=datetime.datetime.utcnow(), description=f"**{question}**\n{answer}")
         embed.set_author(name=ctx.author, icon_url=ctx.author.avatar_url)
