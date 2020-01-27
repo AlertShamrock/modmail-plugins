@@ -76,9 +76,8 @@ class Polls(commands.Cog):
         except:
             pass  # oh well
         answer = "\n".join(f"{keycap}: {content}" for keycap, content in answers)
-        embed = discord.Embed(color=self.bot.main_color, timestamp=datetime.datetime.utcnow(), description=f"**{question}**\n{answer}")
+        embed = discord.Embed(color=self.bot.main_color, footer ="<@&660677269769027584>", timestamp=datetime.datetime.utcnow(), description=f"**{question}**\n{answer}")
         embed.set_author(name=ctx.author, icon_url=ctx.author.avatar_url)
-        embed.set_footer("<@&660677269769027584>")
         poll = await ctx.send(embed=embed)
         for emoji, _ in answers:
             await poll.add_reaction(emoji)
