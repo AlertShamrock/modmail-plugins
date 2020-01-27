@@ -7,7 +7,6 @@ import datetime
 from core import checks
 from core.models import PermissionLevel
 
-
 def to_emoji(c):
     base = 0x1F1E6
     return chr(base + c)
@@ -76,8 +75,6 @@ class Polls(commands.Cog):
         except:
             pass  # oh well
         await ctx.channel.send("<@&660677269769027584>")
-        await ctx.message.delete()
-        wait (0.1)
         answer = "\n".join(f"{keycap}: {content}" for keycap, content in answers)
         embed = discord.Embed(color=self.bot.main_color, timestamp=datetime.datetime.utcnow(), description=f"**{question}**\n{answer}")
         embed.set_author(name=ctx.author, icon_url=ctx.author.avatar_url)
