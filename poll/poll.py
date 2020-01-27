@@ -83,7 +83,6 @@ class Polls(commands.Cog):
         for emoji, _ in answers:
             await poll.add_reaction(emoji)
         await ctx.send("<@&660677269769027584>")
-            await ctx.message.delete()
 
     @start.error
     async def poll_error(self, ctx, error):
@@ -138,7 +137,6 @@ class Polls(commands.Cog):
             for emoji, _ in choices:
                 await poll.add_reaction(emoji)
  await ctx.send("<@&660677269769027584>")
-            await ctx.message.delete()
         
 def setup(bot):
     bot.add_cog(Polls(bot))
