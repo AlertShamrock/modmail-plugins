@@ -80,8 +80,8 @@ class Polls(commands.Cog):
         embed = discord.Embed(color=self.bot.main_color, timestamp=datetime.datetime.utcnow(), description=f"**{question}**\n{answer}")
         embed.set_author(name=ctx.author, icon_url=ctx.author.avatar_url)
         poll = await ctx.send(embed=embed)
-        ctx.send("<@&660677269769027584>")
-        ctx.message.delete()
+       await ctx.send("<@&660677269769027584>")
+      await ctx.message.delete()
         for emoji, _ in answers:
             await poll.add_reaction(emoji)
 
@@ -135,8 +135,8 @@ class Polls(commands.Cog):
             embed = discord.Embed(color=self.bot.main_color, timestamp=datetime.datetime.utcnow(), description=f"**{question}**\n{body}")
             embed.set_author(name=ctx.author, icon_url=ctx.author.avatar_url)
             poll = await ctx.send(embed=embed)
-            ctx.send("<@&660677269769027584>")
-            ctx.message.delete()
+            await ctx.send("<@&660677269769027584>")
+            await ctx.message.delete()
             for emoji, _ in choices:
                 await poll.add_reaction(emoji)
 
