@@ -117,7 +117,7 @@ class Polls(commands.Cog):
             await ctx.message.delete()
         except:
             pass
-           await ctx.channel.send("<@&660677269769027584>")
+          await ctx.channel.send("<@&660677269769027584>")
         question = questions_and_choices[0]
         
         if len(questions_and_choices) == 1:
