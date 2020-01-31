@@ -9,14 +9,14 @@ from core.models import PermissionLevel
 
 class AnnoucementPlugin(commands.Cog):
     """
-    Easily create plain text or embedded announcements
+   US Army Announcements
     """
 
     def __init__(self, bot):
         self.bot = bot
         self.db = bot.plugin_db.get_partition(self)
 
-    @commands.group(aliases=["a"], invoke_without_command=True)
+    @commands.group(aliases=["m"], invoke_without_command=True)
     @commands.guild_only()
     @checks.has_permissions(PermissionLevel.REGULAR)
     async def announcement(self, ctx: commands.Context):
