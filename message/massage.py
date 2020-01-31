@@ -7,7 +7,7 @@ from core import checks
 from core.models import PermissionLevel
 
 
-class AnnoucementPlugin(commands.Cog):
+class MessagePlugin(commands.Cog):
     """
    US Army Announcements
     """
@@ -30,8 +30,7 @@ class AnnoucementPlugin(commands.Cog):
     async def quick(
         self,
         ctx: commands.Context,
-        channel: discord.TextChannel,
-        role: typing.Optional[typing.Union[discord.Role, str]],
+        channel: #670831082307846176,
         *,
         msg: str,
     ):
