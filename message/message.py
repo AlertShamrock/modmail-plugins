@@ -64,4 +64,4 @@ class MessagePlugin(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(AnnoucementPlugin(bot))
+    bot.add_cog(MessagePlugin(bot))
